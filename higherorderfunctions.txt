@@ -1,0 +1,28 @@
+
+inc :: Int -> Int
+inc x = x + 1
+
+incList :: [Int] -> [Int]
+incList [] = []
+incList (x:xs) = inc x : (incList xs)
+
+SubList :: [Int] -> [Int]
+SubList [] = []
+SubList (x:xs) = (x-1) : (SubList xs)
+
+applfunlist :: (a -> b) -> [a] -> [b]
+applfunlist _ [] = []
+applfunlist f (x:xs) = [x] : (applfunlist f xs)
+
+//applfunlist inc [1,2,3] = [2,3,4] 
+
+removeNegs :: [Integer] -> [Integer]
+removeNegs [] = []
+removeNegs (x:xs) = 
+    if x >= 0 then
+        x : rest
+    else
+        rest
+    where rest = removeNegs xs
+
+removeNegs rest = filter (\x -> x > 0) list

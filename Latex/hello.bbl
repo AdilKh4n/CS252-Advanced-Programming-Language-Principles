@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{DBLP:conf/ccs/GulmezogluES17}
+Berk G{\"{u}}lmezoglu, Thomas Eisenbarth, and Berk Sunar.
+\newblock Cache-based application detection in the cloud using machine
+  learning.
+\newblock In Ramesh Karri, Ozgur Sinanoglu, Ahmad{-}Reza Sadeghi, and Xun Yi,
+  editors, {\em Proceedings of the 2017 {ACM} on Asia Conference on Computer
+  and Communications Security, AsiaCCS 2017, Abu Dhabi, United Arab Emirates,
+  April 2-6, 2017}, pages 288--300. {ACM}, 2017.
+
+\bibitem{DBLP:conf/cscloud/SalmanBEJS17}
+Tara Salman, Deval Bhamare, Aiman Erbad, Raj Jain, and Mohammed Samaka.
+\newblock Machine learning for anomaly detection and categorization in
+  multi-cloud environments.
+\newblock In {\em 4th {IEEE} International Conference on Cyber Security and
+  Cloud Computing, CSCloud 2017, New York, NY, USA, June 26-28, 2017}, pages
+  97--103. {IEEE}, 2017.
+
+\end{thebibliography}

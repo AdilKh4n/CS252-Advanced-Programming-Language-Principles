@@ -1,0 +1,10 @@
+
+input qualified DataMap as Map 
+
+m = Map.empty
+
+m' = Map.insert 3 "Hello" m
+
+s = case(Map.lookup 3 m)
+    Just s' -> s
+    Nothing -> error "Not Found"
