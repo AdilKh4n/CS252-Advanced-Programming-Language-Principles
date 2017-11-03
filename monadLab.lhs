@@ -27,7 +27,9 @@ Minus is also done for you.  This case **does** use monads,
 but without the do syntax.
 
 > applyOp Minus mi mj =
->   mi >>= (\i -> mj >>= (\j -> Just $ i - j))
+>   mi >>= (\i fi-> 
+>   mj >>= (\j -> 
+>       Just $ i - j))
 
 Implement Times and Divide.  Try the Times case without using bind (>>=).
 

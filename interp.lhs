@@ -37,7 +37,6 @@ expEq _      _    = False
 >    case (evaluate cond) of
 >        VTrue -> evaluate expTrue
 >        VFalse -> evaluate expFalse
->        _    -> error "cond must eval to true or false"
 
 
 And here we have a couple of programs to test.

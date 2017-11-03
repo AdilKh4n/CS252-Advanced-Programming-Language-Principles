@@ -35,8 +35,15 @@ and get back a tree with the result.
 >   pure = leaf
 >   Empty <*> _ = Empty
 >   _ <*> Empty = Empty
->   (Node left right f) <*> (Node left' right' v) = Node(left <*> left') (right <*> right') (v + f)
->   leaf a <*> leaf b = leaf (a+b) 
+>   (Node left right f) <*> (Node left' right' v) = Node (left <*> left') (right <*> right') (f v)
+
+
+(Node left right f) <*> (Node left' right' v) = Node (fmap (extractVal left) left') (fmap (extractVal right) right') (f v)
+
+
+> extractVal :: Tree a -> a
+> extractVal (Node left right a) = a
+> extractVal Empty = error "ahah"
 
 Here are a few functions to test out your changes:
 

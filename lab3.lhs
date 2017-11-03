@@ -7,7 +7,7 @@ defined as myFoldl
 
 > myFoldl :: (a -> b -> a) -> a -> [b] -> a
 > myFoldl f z [] = z
-> myFoldl f z (x:xs) = f y (myFoldl f z (pairs f xs))
+> myFoldl f z (x:xs) = myFoldl f (f z x) xs
 
 > pairs            :: (a -> b -> a) -> [a] -> [b]
 > pairs f (x:y:t)  = f x y : pairs f t
