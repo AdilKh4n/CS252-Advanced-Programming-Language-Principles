@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use the XMLHttpRequest to get the content of a file.</h2>
+<p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+<script>
+
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj =
+      this.responseText;
+    }
+   // var x = " ";
+
+    for (i in myObj) {
+        for (x in myObj[i]) {
+        document.getElementById("demo").innerHTML += x + "<br>";
+}
+         }
+    
+   // document.getElementById("demo").innerHTML = x;
+
+  };
+  xhttp.open("GET", "https://canvas.instructure.com/api/v1/courses/120000001240739/assignments?access_token=12~fnVYvjJ1phGenobZ5GfAR8TnJJYZqAuOeQWskvFdZFWEqSmzP0iEfE1aE3gN6D4A", true);
+  xhttp.send();
+}
+
+</script>
+
+</body>
+</html>

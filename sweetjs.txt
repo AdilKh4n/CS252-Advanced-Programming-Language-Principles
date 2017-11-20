@@ -1,0 +1,38 @@
+class Droid{
+    constructor(name,color)
+    {
+        this.name = name;
+        this.color = color;
+    }
+    rollMathit(it)
+    {
+        return this.name + "is rolling with" + it;
+    }
+
+}
+
+import {unwrap,isIdentifier} from @sweet.js/helpers for syntax;
+syntax class = function(ctx)
+{
+    var name = ctx.next().value;
+    var bodyCtx = ctx.contextify(ctx.next().value);
+    var construct = #`function ${name} (){}`;
+    var result = #``;
+    for (item of bodyCtx)
+    {
+        if(isIdentifier(item) && unwrap(item).value === 'constructor')
+            {
+                construct = #` function ${name} ${bodyCtx.next().value} ${bodyCtx.next().value}` 
+            }
+        else
+            {
+            result = result.concat(#`${name}.protoype.$item = function ${bodyCtx.next().value} ${bodyCtx.next().value};`)
+            }
+    }
+    return construct.concat(result);
+
+}
+
+//Rotate
+rotate (x,y,z)
+rotate (a,b,c,d,e,f)
